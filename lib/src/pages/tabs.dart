@@ -17,41 +17,47 @@ class AboutUs extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      Container(
-                        height: size.height,
-                        width: size.width / 2,
-                        child: RichText(
-                          maxLines: 2,
-                          text: TextSpan(
-                            text:
-                                'Hello TextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPrueba',
-                            style: DefaultTextStyle.of(context).style,
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text:
-                                      'bold TextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPrueba',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: ' world!'),
-                            ],
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: size.height * 0.5,
+                          width: size.width / 2,
+                          child: RichText(
+                            maxLines: 2,
+                            text: TextSpan(
+                              text:
+                                  'Hello TextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPrueba',
+                              style: DefaultTextStyle.of(context).style,
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text:
+                                        'bold TextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPrueba',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                                TextSpan(text: ' world!'),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                  Container(
-                      height: size.height / 5,
-                      width: size.width / 5,
-                      child: Expanded(
-                        child: Image.asset(
-                          'imageprueba.jpg',
-                          fit: BoxFit.contain,
-                          height: 240,
-                          width: 240, //240),
-                        ),
-                      ))
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                        height: size.height / 5,
+                        width: size.width / 5,
+                        child: Expanded(
+                          child: Image.asset(
+                            'imageprueba.jpg',
+                            fit: BoxFit.contain,
+                            height: 240,
+                            width: 240, //240),
+                          ),
+                        )),
+                  )
                 ],
               )
             ],
