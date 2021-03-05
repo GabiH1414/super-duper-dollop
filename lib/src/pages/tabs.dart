@@ -5,16 +5,54 @@ class AboutUs extends StatelessWidget {
   final controller = PageController(initialPage: 1);
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return PageView(
       controller: controller,
       scrollDirection: Axis.horizontal,
       children: [
         Container(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(50),
           child: Column(
             children: [
               Row(
-                children: [Text('TextoPrueba ')],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        height: size.height,
+                        width: size.width / 2,
+                        child: RichText(
+                          maxLines: 2,
+                          text: TextSpan(
+                            text:
+                                'Hello TextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPrueba',
+                            style: DefaultTextStyle.of(context).style,
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text:
+                                      'bold TextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPruebaTextoPrueba',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                              TextSpan(text: ' world!'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                      height: size.height / 5,
+                      width: size.width / 5,
+                      child: Expanded(
+                        child: Image.asset(
+                          'imageprueba.jpg',
+                          fit: BoxFit.contain,
+                          height: 240,
+                          width: 240, //240),
+                        ),
+                      ))
+                ],
               )
             ],
           ),
