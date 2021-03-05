@@ -11,19 +11,22 @@ class AboutUs extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       children: [
         Container(
+          height: size.height * 0.5,
+          width: size.width / 2,
           padding: EdgeInsets.all(50),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Expanded(
                     flex: 2,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: size.height * 0.5,
-                          width: size.width / 2,
                           child: RichText(
                             maxLines: 2,
                             text: TextSpan(
