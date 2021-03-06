@@ -134,7 +134,7 @@ class Tabs extends StatelessWidget {
               //),
 
               new Image.asset(
-                'assets/imageprueba.jpg',
+                'assets/electro_industrias_negro.jpg',
                 fit: BoxFit.contain,
                 height: size.height / 6,
                 width: size.width / 3, //240
