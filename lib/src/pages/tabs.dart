@@ -54,7 +54,7 @@ class AboutUs extends StatelessWidget {
                         width: size.width / 5,
                         child: Expanded(
                           child: Image.asset(
-                            'imageprueba.jpg',
+                            'assets/imageprueba.jpg',
                             fit: BoxFit.contain,
                             height: 240,
                             width: 240, //240),
@@ -134,7 +134,7 @@ class Tabs extends StatelessWidget {
               //),
 
               new Image.asset(
-                'electro_industrias_negro.jpg',
+                'assets/imageprueba.jpg',
                 fit: BoxFit.contain,
                 height: size.height / 6,
                 width: size.width / 3, //240
